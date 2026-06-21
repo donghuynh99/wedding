@@ -3,6 +3,10 @@ const WEDDING_DATE = new Date('2026-08-02T17:00:00');
 const WEDDING_TITLE = 'Lễ Thành Hôn Văn Đồng & Thu Uyên';
 const WEDDING_LOCATION = 'Tầng 1 Nhà Hàng Tiệc Cưới Đại Hỷ, 187 Hà Huy Tập, Thanh Khê, Đà Nẵng';
 
+// Dán URL Web App từ Google Apps Script vào đây để lưu lời chúc vào Google Sheet.
+// Để trống ('') nếu chưa thiết lập — form vẫn hoạt động bình thường, chỉ lưu ở localStorage.
+const SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzk6ISmBLULWxBk1QBZ2ZPo_iV_oFwQFJdYC0XJUu_zZUJd4vS_YoGMCvHFwIeR4s2T0w/exec';
+
 const SAMPLE_WISHES = [
   { name: 'Nguyễn Thị Mai', attend: 'yes', guests: 2, message: 'Chúc Đồng và Uyên trăm năm hạnh phúc, mãi yêu thương nhau như ngày đầu!' },
   { name: 'Trần Văn Long', attend: 'yes', guests: 1, message: 'Chúc mừng hai bạn! Sớm có tin vui nhé ❤️' },
@@ -12,7 +16,6 @@ const SAMPLE_WISHES = [
 document.addEventListener('DOMContentLoaded', () => {
   initPreloader();
   initPetals();
-  initNavbar();
   initScrollReveal();
   initCountdown();
   initAddToCalendar();
@@ -51,47 +54,6 @@ function initPetals() {
     petal.style.fontSize = 14 + Math.random() * 12 + 'px';
     petal.style.opacity = 0.4 + Math.random() * 0.5;
     container.appendChild(petal);
-  }
-}
-
-/* ---------- Navbar: scroll style + mobile menu + active link ---------- */
-function initNavbar() {
-  const navbar = document.getElementById('navbar');
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
-  const navLinkEls = document.querySelectorAll('.nav-link');
-
-  const sections = Array.from(navLinkEls).map(link => {
-    const id = link.getAttribute('href').slice(1);
-    return { link, el: document.getElementById(id) };
-  }).filter(s => s.el);
-
-  const onScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-    updateActiveLink();
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('open');
-    document.body.classList.toggle('nav-open');
-  });
-
-  navLinkEls.forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('open');
-      document.body.classList.remove('nav-open');
-    });
-  });
-
-  function updateActiveLink() {
-    let current = sections[0];
-    const scrollPos = window.scrollY + window.innerHeight * 0.3;
-    sections.forEach(s => {
-      if (s.el.offsetTop <= scrollPos) current = s;
-    });
-    sections.forEach(s => s.link.classList.toggle('active', s === current));
   }
 }
 
@@ -247,12 +209,25 @@ function initRSVP() {
     wishes.push(wish);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(wishes));
 
+    sendWishToSheet(wish);
+
     renderWishes();
     form.reset();
     showToast('Cảm ơn bạn đã gửi lời chúc! 💌');
   });
 
   renderWishes();
+}
+
+/* ---------- Gửi lời chúc lên Google Sheet (qua Apps Script Web App) ---------- */
+function sendWishToSheet(wish) {
+  if (!SHEET_WEBHOOK_URL) return;
+  fetch(SHEET_WEBHOOK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(wish),
+  }).catch(() => {});
 }
 
 /* ---------- Toast ---------- */
@@ -284,17 +259,38 @@ function initMusicToggle() {
   const audio = document.getElementById('bgMusic');
   let playing = false;
 
+  function startPlaying() {
+    audio.play().then(() => {
+      playing = true;
+      btn.classList.add('playing');
+    }).catch(() => {});
+  }
+
+  // Try autoplay as soon as the page is ready.
+  startPlaying();
+
+  // Browsers may block autoplay with sound until the user interacts —
+  // fall back to starting music on the very first tap/click anywhere
+  // (but let the toggle button manage playback itself, see below).
+  const tryOnFirstInteraction = (e) => {
+    if (btn.contains(e.target)) return;
+    if (!playing) startPlaying();
+    document.removeEventListener('click', tryOnFirstInteraction);
+    document.removeEventListener('touchstart', tryOnFirstInteraction);
+    document.removeEventListener('keydown', tryOnFirstInteraction);
+  };
+  document.addEventListener('click', tryOnFirstInteraction);
+  document.addEventListener('touchstart', tryOnFirstInteraction);
+  document.addEventListener('keydown', tryOnFirstInteraction);
+
   btn.addEventListener('click', () => {
     if (playing) {
       audio.pause();
       btn.classList.remove('playing');
+      playing = false;
     } else {
-      audio.play().catch(() => {
-        showToast('Thêm file audio/bg-music.mp3 để phát nhạc nền nhé!');
-      });
-      btn.classList.add('playing');
+      startPlaying();
     }
-    playing = !playing;
   });
 }
 

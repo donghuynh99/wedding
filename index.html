@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Văn Đồng & Thu Uyên | Thiệp Cưới</title>
 <meta name="description" content="Thiệp cưới online của Huỳnh Văn Đồng và Phạm Thị Uyên">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="alternate icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -21,24 +26,6 @@
   <!-- Falling petals layer -->
   <div class="petals" id="petals" aria-hidden="true"></div>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">Đ &amp; U</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Trang chủ</a></li>
-        <li><a href="#couple" class="nav-link">Cô Dâu &amp; Chú Rể</a></li>
-        <li><a href="#countdown" class="nav-link">Đếm Ngược</a></li>
-        <li><a href="#events" class="nav-link">Sự Kiện</a></li>
-        <li><a href="#gallery" class="nav-link">Album</a></li>
-        <li><a href="#rsvp" class="nav-link">Lời Chúc</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <!-- Hero -->
   <header class="hero" id="home">
     <div class="hero-bg" style="background-image:url('images/hero-bg.jpg')"></div>
@@ -46,6 +33,44 @@
     <div class="hero-side hero-side-right" style="background-image:url('images/hero-right.jpg')"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <div class="hero-ornament reveal" data-reveal aria-hidden="true">
+        <svg viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 24 Q50 6 95 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          <path d="M236 24 Q190 6 145 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          <path d="M28 18 q6 -10 16 -8" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M212 18 q-6 -10 -16 -8" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
+          <g transform="translate(60,16)">
+            <g fill="#d9a8a0">
+              <ellipse rx="3.2" ry="4.6" cy="-5"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(72)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(144)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(216)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(288)"/>
+            </g>
+            <circle r="1.8" fill="var(--color-gold)"/>
+          </g>
+          <g transform="translate(180,16)">
+            <g fill="#d9a8a0">
+              <ellipse rx="3.2" ry="4.6" cy="-5"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(72)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(144)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(216)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(288)"/>
+            </g>
+            <circle r="1.8" fill="var(--color-gold)"/>
+          </g>
+          <g transform="translate(120,20)">
+            <g fill="#d9a8a0">
+              <ellipse rx="4" ry="5.6" cy="-6"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(72)"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(144)"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(216)"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(288)"/>
+            </g>
+            <circle r="2.2" fill="var(--color-gold)"/>
+          </g>
+        </svg>
+      </div>
       <p class="hero-sub reveal" data-reveal>SAVE THE DATE</p>
       <h1 class="hero-names reveal" data-reveal>
         <span>Văn Đồng</span>
@@ -53,7 +78,44 @@
         <span class="bride-name">Thu Uyên</span>
       </h1>
       <p class="hero-date reveal" data-reveal>02 . 08 . 2026</p>
-      <a href="#countdown" class="btn btn-outline reveal" data-reveal>Xem Thiệp Cưới</a>
+      <div class="hero-ornament reveal" data-reveal aria-hidden="true">
+        <svg viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 24 Q50 6 95 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          <path d="M236 24 Q190 6 145 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+          <path d="M28 18 q6 -10 16 -8" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M212 18 q-6 -10 -16 -8" stroke="currentColor" stroke-width="1" fill="none" opacity="0.5"/>
+          <g transform="translate(60,16)">
+            <g fill="#d9a8a0">
+              <ellipse rx="3.2" ry="4.6" cy="-5"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(72)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(144)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(216)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(288)"/>
+            </g>
+            <circle r="1.8" fill="var(--color-gold)"/>
+          </g>
+          <g transform="translate(180,16)">
+            <g fill="#d9a8a0">
+              <ellipse rx="3.2" ry="4.6" cy="-5"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(72)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(144)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(216)"/>
+              <ellipse rx="3.2" ry="4.6" cy="-5" transform="rotate(288)"/>
+            </g>
+            <circle r="1.8" fill="var(--color-gold)"/>
+          </g>
+          <g transform="translate(120,20)">
+            <g fill="#d9a8a0">
+              <ellipse rx="4" ry="5.6" cy="-6"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(72)"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(144)"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(216)"/>
+              <ellipse rx="4" ry="5.6" cy="-6" transform="rotate(288)"/>
+            </g>
+            <circle r="2.2" fill="var(--color-gold)"/>
+          </g>
+        </svg>
+      </div>
     </div>
     <button class="scroll-down" id="scrollDown" aria-label="Cuộn xuống"><span></span></button>
   </header>
@@ -73,8 +135,7 @@
   <!-- Couple -->
   <section class="couple" id="couple">
     <div class="container">
-      <p class="section-sub reveal" data-reveal>Lời mời trân trọng từ</p>
-      <h2 class="section-title reveal" data-reveal>Cô Dâu &amp; Chú Rể</h2>
+      <p class="section-sub couple-intro reveal" data-reveal>Lời mời trân trọng từ</p>
 
       <div class="couple-grid">
         <div class="couple-card reveal" data-reveal>
@@ -222,8 +283,8 @@
 
   <button id="backToTop" aria-label="Lên đầu trang">&#8593;</button>
 
-  <audio id="bgMusic" loop>
-    <source src="audio/bg-music.mp3" type="audio/mpeg">
+  <audio id="bgMusic" loop preload="auto">
+    <source src="audio/christina-perri-a-thousand-years-official-music-video_1MpQDpC9.mp3" type="audio/mpeg">
   </audio>
   <button id="musicToggle" class="music-toggle" aria-label="Bật/Tắt nhạc">&#127925;</button>
 
