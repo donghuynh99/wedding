@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8d8ea"/>
+      <stop offset="100%" stop-color="#4f7f99"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#g6)"/>
+  <text x="50%" y="48%" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#ffffff">Ảnh Cưới 6</text>
+  <text x="50%" y="55%" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#ffffff" opacity="0.8">images/gallery-6.svg</text>
+</svg>
