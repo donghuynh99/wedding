@@ -120,45 +120,109 @@
     <button class="scroll-down" id="scrollDown" aria-label="Cuộn xuống"><span></span></button>
   </header>
 
-  <!-- Intro Quote -->
-  <section class="intro" id="intro">
-    <div class="container reveal" data-reveal>
-      <p class="ornament">&#10084;</p>
-      <p class="intro-quote">
-        "Hạnh phúc không phải là đích đến, mà là cả một hành trình.<br>
-        Và chúng tôi đã tìm thấy người để cùng đi suốt hành trình ấy."
-      </p>
-      <p class="intro-names">Văn Đồng <span class="amp">&amp;</span> Thu Uyên</p>
-    </div>
-  </section>
-
   <!-- Couple -->
   <section class="couple" id="couple">
     <div class="container">
-      <p class="section-sub couple-intro reveal" data-reveal>Lời mời trân trọng từ</p>
+      <p class="section-sub couple-intro reveal" data-reveal>Thư mời tham dự lễ cưới</p>
 
       <div class="couple-grid">
-        <div class="couple-card reveal" data-reveal>
+        <div class="couple-card couple-card-groom reveal" data-reveal>
           <div class="couple-photo">
             <img src="images/groom.jpg" alt="Ảnh chú rể Huỳnh Văn Đồng">
+            <h3 class="couple-name-overlay">Huỳnh Văn Đồng</h3>
+            <p class="couple-role couple-role-overlay">Chú Rể</p>
           </div>
-          <h3>Huỳnh Văn Đồng</h3>
-          <p class="couple-role">Chú Rể</p>
         </div>
 
         <div class="couple-divider reveal" data-reveal>
           <span class="amp-large">&amp;</span>
         </div>
 
-        <div class="couple-card reveal" data-reveal>
+        <div class="couple-card couple-card-bride reveal" data-reveal>
           <div class="couple-photo">
             <img src="images/bride.jpg" alt="Ảnh cô dâu Phạm Thị Uyên">
+            <h3 class="couple-name-overlay">Phạm Thị Uyên</h3>
+            <p class="couple-role couple-role-overlay">Cô Dâu</p>
           </div>
-          <h3>Phạm Thị Uyên</h3>
-          <p class="couple-role">Cô Dâu</p>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Invitation -->
+  <section class="invitation" id="invitation">
+    <div class="container">
+      <div class="invitation-card reveal" data-reveal>
+        <div class="invitation-badge">
+          <svg viewBox="0 0 200 100" class="invitation-badge-arc" aria-hidden="true">
+            <defs>
+              <path id="badgeCircle" d="M 15,100 a 85,85 0 1,1 170,0" fill="none"/>
+            </defs>
+            <text font-size="12.5" letter-spacing="2.5">
+              <textPath href="#badgeCircle" startOffset="50%" text-anchor="middle">TOGETHER FOREVER</textPath>
+            </text>
+          </svg>
+          <span class="invitation-heart">&#10084;</span>
+          <p class="invitation-badge-date">02.08.2026</p>
+        </div>
+
+        <div class="invitation-families">
+          <div class="invitation-family">
+            <p class="invitation-family-title">Nhà Trai</p>
+            <p>Ông: Huỳnh Văn Quang</p>
+            <p>Bà: Trần Thị Lan</p>
+            <p>Thành phố Đà Nẵng</p>
+          </div>
+          <div class="invitation-family">
+            <p class="invitation-family-title">Nhà Gái</p>
+            <p>Ông: Phạm Hữu Giang</p>
+            <p>Bà: Trịnh Thị Nhẫn</p>
+            <p>Tỉnh Hưng Yên</p>
+          </div>
+        </div>
+
+        <p class="invitation-announce">TRÂN TRỌNG KÍNH MỜI THAM DỰ TIỆC CHUNG VUI CỦA GIA ĐÌNH CHÚNG TÔI</p>
+
+        <h2 class="invitation-name">Huỳnh Văn Đồng</h2>
+
+        <div class="invitation-roles">
+          <span class="invitation-rings" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="invitation-name">Phạm Thị Uyên</h2>
+
+        <!-- <p class="invitation-venue">Hôn lễ được cử hành<br>tại Tư Gia Nam</p> -->
+
+        <p class="invitation-time-line">17:00, Chủ Nhật</p>
+
+        <div class="invitation-date-row">
+          <div class="invitation-date-label-col">
+            <span class="invitation-date-label">Tháng 08</span>
+          </div>
+          <span class="invitation-date-day">02</span>
+          <div class="invitation-date-label-col">
+            <span class="invitation-date-label">Năm 2026</span>
+          </div>
+        </div>
+
+        <p class="invitation-lunar">(Nhằm ngày 20 tháng 06 năm Bính Ngọ)</p>
+
+        <p class="invitation-venue-label">TỔ CHỨC TẠI</p>
+        <p class="invitation-place">Tầng 1, Nhà Hàng Tiệc Cưới Đại Hỷ<br>187 Hà Huy Tập, Thanh Khê, Đà Nẵng</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=187+Ha+Huy+Tap+Thanh+Khe+Da+Nang" target="_blank" rel="noopener" class="btn btn-outline-sm invitation-direction-btn">
+          <svg class="invitation-pin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          Chỉ Đường
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Photo -->
+  <section class="intro-photo reveal" data-reveal>
+    <img src="images/gallery-1.jpg" alt="Ảnh cưới Văn Đồng và Thu Uyên">
   </section>
 
   <!-- Countdown -->
@@ -187,29 +251,13 @@
     </div>
   </section>
 
-  <!-- Events -->
-  <section class="events" id="events">
-    <div class="container">
-      <p class="section-sub reveal" data-reveal>Trân trọng kính mời</p>
-      <h2 class="section-title reveal" data-reveal>Thông Tin Buổi Lễ</h2>
-
-      <div class="events-grid events-grid-single">
-        <div class="event-card reveal" data-reveal>
-          <div class="event-icon">&#128141;</div>
-          <h3>Lễ Thành Hôn</h3>
-          <p class="event-time">Chủ Nhật, 02.08.2026 &mdash; 05:00 PM</p>
-          <p class="event-place">Tầng 1 Nhà Hàng Tiệc Cưới Đại Hỷ<br>187 Hà Huy Tập, Thanh Khê,<br>Đà Nẵng</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=187+Ha+Huy+Tap+Thanh+Khe+Da+Nang" target="_blank" rel="noopener" class="btn btn-outline-sm">Xem Bản Đồ</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Gallery -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <p class="section-sub reveal" data-reveal>Những khoảnh khắc</p>
-      <h2 class="section-title reveal" data-reveal>Album Cưới</h2>
+      <p class="gallery-title reveal" data-reveal>
+        <span class="gallery-title-line1"><span class="gallery-title-word">Album</span></span>
+        <span class="gallery-title-line2"><span class="gallery-title-of">of</span><span class="gallery-title-word">Love</span></span>
+      </p>
 
       <div class="gallery-grid">
         <div class="gallery-item reveal" data-reveal><img src="images/gallery-1.jpg" alt="Ảnh cưới 1"></div>
@@ -233,13 +281,12 @@
   <!-- RSVP -->
   <section class="rsvp" id="rsvp">
     <div class="container">
-      <p class="section-sub reveal" data-reveal>Sự hiện diện của bạn là niềm vinh hạnh</p>
       <h2 class="section-title reveal" data-reveal>Gửi Lời Chúc &amp; Xác Nhận</h2>
 
       <form class="rsvp-form reveal" data-reveal id="rsvpForm">
         <div class="form-row">
           <label for="rsvpName">Họ và tên</label>
-          <input type="text" id="rsvpName" name="name" placeholder="Nguyễn Văn A" required>
+          <input type="text" id="rsvpName" name="name" required>
         </div>
 
         <div class="form-row">
@@ -256,12 +303,12 @@
 
         <div class="form-row">
           <label for="rsvpGuests">Số người đi cùng</label>
-          <input type="number" id="rsvpGuests" name="guests" min="0" max="10" value="1">
+          <input type="number" id="rsvpGuests" name="guests" min="0" max="10">
         </div>
 
         <div class="form-row">
           <label for="rsvpMessage">Lời chúc của bạn</label>
-          <textarea id="rsvpMessage" name="message" rows="4" placeholder="Chúc hai bạn trăm năm hạnh phúc..."></textarea>
+          <textarea id="rsvpMessage" name="message" rows="4"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Gửi Lời Chúc</button>
@@ -273,11 +320,9 @@
   <footer class="footer">
     <p class="ornament">&#10084;</p>
     <h3 class="footer-names">
-      <span>Huỳnh Văn Đồng</span>
-      <span class="amp">&amp;</span>
-      <span class="footer-bride-name">Phạm Thị Uyên</span>
+      <span class="footer-bride-name">Lời cảm ơn!</span>
     </h3>
-    <p>Cảm ơn bạn đã dành thời gian ghi lại khoảnh khắc đặc biệt này cùng chúng tôi.</p>
+    <p>Cảm ơn quý khách đã dành thời gian cho gia đình chúng tôi! Sự hiện diện của quý khách chính là món quà ý nghĩa nhất, gia đình chúng tôi vô cùng trân quý khi được cùng quý khách chia sẽ niềm hạnh phúc trong ngày trọng đại này.</p>
     <p class="footer-hashtag">#DongUyenWedding2026</p>
   </footer>
 
