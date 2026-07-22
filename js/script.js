@@ -201,6 +201,7 @@ function initRSVP() {
       name: data.get('name').trim(),
       attend: data.get('attend'),
       guests: data.get('guests') || 0,
+      vegetarian: data.get('vegetarian') ? 'yes' : 'no',
       message: data.get('message').trim(),
     };
     if (!wish.name) return;
