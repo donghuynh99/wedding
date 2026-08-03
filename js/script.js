@@ -1,7 +1,7 @@
 // ====== CONFIG: chỉnh ngày giờ cưới của bạn tại đây ======
-const WEDDING_DATE = new Date('2026-08-02T17:00:00');
+const WEDDING_DATE = new Date('2026-08-09T08:30:00');
 const WEDDING_TITLE = 'Lễ Thành Hôn Văn Đồng & Thu Uyên';
-const WEDDING_LOCATION = 'Tầng 1 Nhà Hàng Tiệc Cưới Đại Hỷ, 187 Hà Huy Tập, Thanh Khê, Đà Nẵng';
+const WEDDING_LOCATION = 'Tư Gia Nữ, Xóm 9, Thôn Đông, Bắc Đông Hưng, Hưng Yên';
 
 // Dán URL Web App từ Google Apps Script vào đây để lưu lời chúc vào Google Sheet.
 // Để trống ('') nếu chưa thiết lập — form vẫn hoạt động bình thường, chỉ lưu ở localStorage.
